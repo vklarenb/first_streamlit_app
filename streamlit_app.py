@@ -1,7 +1,6 @@
 import streamlit
 import pandas
 import requests
-import snowflake.connector
 from urllib.error import URLError
 
 streamlit.title('My Parents New Healthy Diner')
@@ -42,7 +41,9 @@ try:
 
 except URLError as e:
       streamlit.error()
-    
+  
+import snowflake.connector
+
 streamlit.header("The fruit load list contains:")
 #Snowflake-related functions
 def get_fruit_load_list():
